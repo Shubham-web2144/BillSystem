@@ -89,3 +89,10 @@ timeBox.innerHTML = hr + ":" + mn;
 btn.addEventListener("click", () => {
     window.print();
 });
+
+let checkBox = document.getElementById('1');
+let discBox = document.getElementById('disc_box');
+checkBox.addEventListener('click' , () => {
+  discBox.classList.toggle('active');
+  console.log("Hell");
+})

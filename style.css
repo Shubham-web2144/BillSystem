@@ -1,165 +1,246 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.container{
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background-color: #f1f1f1;
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f1f1f1;
 }
-.header{
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 38px 0px;
-    background: linear-gradient(to left, rgb(247, 14, 14),rgb(211, 141, 12));
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f1f1f1;
 }
-.header h3{
-    font-weight: 700;
-    font-size: 38px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #f1f1f1;
+.header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 38px 0px;
+  background: linear-gradient(to left, rgb(247, 14, 14), rgb(211, 141, 12));
 }
-.header h5{
-    letter-spacing: 2px;
+.header h3 {
+  font-weight: 700;
+  font-size: 38px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #f1f1f1;
 }
-.print_area{
-    margin-top: -20px;
+.header h5 {
+  letter-spacing: 2px;
 }
-.rate__cal{
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    /* margin-top: 25%; */
-    padding-top: 30px;
+.print_area {
+  margin-top: -20px;
 }
-.input__box-title,.input__box-input{
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.rate__cal {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 25%; */
+  padding-top: 30px;
 }
-.input__box-title{
-    /* padding: 10px 0px; */
-    border: 1px solid ;
-    text-align: start;
+.input__box-title,
+.input__box-input {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.input__box-title {
+  /* padding: 10px 0px; */
+  border: 1px solid;
+  text-align: start;
 }
 
-.input__box-title span{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 10px 0px;
-    border-right: 1px solid;
-    text-align: center;
+.input__box-title span {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 10px 0px;
+  border-right: 1px solid;
+  text-align: center;
 }
-.input__box-input{
+.input__box-input {
+  border: 1px solid;
+  height: 40px;
+}
+.input__box-input span {
+  position: relative;
+  width: 100%;
+  /* height: 30px; */
+  border-right: 1px solid;
+  padding: 10px 0px;
+  text-align: center;
+}
+.input__box-input span input {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  border-right: 1px solid;
+  padding-left: 10px;
+  font-weight: 800;
+  border: none;
+  border-bottom: 1px solid;
+  outline: none;
+  background-color: transparent;
+}
+.input__box-result ,.disc_box{
+  position: relative;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 10px 0px;
+  border: 1px solid;
+}
+.input__box-result span input , .disc_box span input{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding-left: 8px;
+  font-weight: 800;
+  background-color: transparent;
+}
+.disc_box span input{
     border: 1px solid;
-    height: 40px;
 }
-.input__box-input span{
-    position: relative;
-    width: 100%;
-    /* height: 30px; */
-    border-right: 1px solid;
-    padding: 10px 0px;
-    text-align: center;
+.input__box-result span:nth-child(1) {
+  flex: 0.7;
+  display: flex;
+  width: 100%;
+  justify-content: right;
+  padding-right: 13px;
 }
-.input__box-input span input{
-    position: relative;
-    width: 100%;
-    height: 40px;
-    border-right: 1px solid;
-    padding-left: 10px;
-    font-weight: 800;
-    border: none;
-    border-bottom: 1px solid;
-    outline: none;
-    background-color: transparent;
+.input__box-result span:nth-child(2) {
+  flex: 0.256;
+  border-left: 1px solid;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  /* padding-left: 10px; */
 }
-.input__box-result{
-    position: relative;
-    width: 100%;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    padding: 10px 0px;
-    border: 1px solid;
+.btn {
+  position: relative;
+  margin-top: 50px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 30px;
+  padding: 3px;
+  border-radius: 3px;
+  border: none;
+  background-color: green;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
 }
-
-.input__box-result span:nth-child(1){
-    flex: 0.7;
-    display: flex;
-    width: 100%;
-    justify-content: right;
-    padding-right: 13px;
+.date__time {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 0px 10px;
+  align-items: center;
 }
-.input__box-result span:nth-child(2){
-    flex: 0.256;
-    border-left: 1px solid;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    /* padding-left: 10px; */
+.date__box {
+  position: relative;
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
-.btn{
-    position: relative;
-    margin-top: 50px;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    width: 140px;
-    height: 30px;
-    padding: 3px;
-    border-radius: 3px;
-    border: none;
-    background-color: green;
-    color: #fff;
-    text-transform: uppercase;
-    cursor: pointer;
+.discount_box {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  padding: 10px 12px;
+  align-items: center;
 }
-.date__time{
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    padding: 0px 10px;
-    align-items: center;
-}
-.date__box{
-    position: relative;
-    width: 140px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-@media print{
-    *{
-        visibility: hidden;
-    }
-    .print_area, .print_area *{
-        visibility: visible;
-    }
+.discount_box label {
+  font-weight: 700;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 450px){
-    .header h3{
-        font-size: 19px;
-    }
-    .header h5{
-        font-size: 10px;
-    }
-    .input__box-title span{
-        font-size: 14px;
-        font-weight: 600;
-    }
+/* Hide elements visually, but not for screenreaders by clipping it */
+
+.vh {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+/*  Add a :before to each label and style this as the checkbox you want to have */
+
+.discount_box label:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: #f2f2f2;
+  border: 1px solid rgba(22, 123, 247, 0.959);
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/*  Change the styling of the :before when the hidden checkbox is checked, you also can add a background-image  */
+
+.discount_box input[type="checkbox"]:checked ~ label:before {
+  background: #20bf6b no-repeat center;
+  background-size: 12px 12px;
+  background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDQ1LjcwMSA0NS43IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NS43MDEgNDUuNzsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0yMC42ODcsMzguMzMyYy0yLjA3MiwyLjA3Mi01LjQzNCwyLjA3Mi03LjUwNSwwTDEuNTU0LDI2LjcwNGMtMi4wNzItMi4wNzEtMi4wNzItNS40MzMsMC03LjUwNCAgICBjMi4wNzEtMi4wNzIsNS40MzMtMi4wNzIsNy41MDUsMGw2LjkyOCw2LjkyN2MwLjUyMywwLjUyMiwxLjM3MiwwLjUyMiwxLjg5NiwwTDM2LjY0Miw3LjM2OGMyLjA3MS0yLjA3Miw1LjQzMy0yLjA3Miw3LjUwNSwwICAgIGMwLjk5NSwwLjk5NSwxLjU1NCwyLjM0NSwxLjU1NCwzLjc1MmMwLDEuNDA3LTAuNTU5LDIuNzU3LTEuNTU0LDMuNzUyTDIwLjY4NywzOC4zMzJ6IiBmaWxsPSIjRkZGRkZGIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+}
+
+/*  Show when label and checkbox have focus, to make this keyboard accessible > press spacebar to select the checkbox */
+
+.discount_box input[type="checkbox"]:focus ~ label {
+  color: #20bf6b;
+}
+.input__box-result span input #disc_box{
+    display: none;
+}
+.input__box-result span input #disc_box.active{
+    display: block;
+}
+
+@media print {
+  * {
+    visibility: hidden;
+  }
+  .print_area,
+  .print_area * {
+    visibility: visible;
+    -webkit-print-color-adjust: exact;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header h3 {
+    font-size: 19px;
+  }
+  .header h5 {
+    font-size: 10px;
+  }
+  .input__box-title span {
+    font-size: 14px;
+    font-weight: 600;
+  }
 }
