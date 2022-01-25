@@ -43,7 +43,7 @@ body {
   display: flex;
   flex-direction: column;
   /* margin-top: 25%; */
-  padding-top: 30px;
+  padding-top: 20px;
 }
 .input__box-title,
 .input__box-input {
@@ -71,6 +71,7 @@ body {
   border: 1px solid;
   height: 40px;
 }
+
 .input__box-input span {
   position: relative;
   width: 100%;
@@ -91,7 +92,8 @@ body {
   outline: none;
   background-color: transparent;
 }
-.input__box-result ,.disc_box{
+
+.input__box-result ,.input__box-disc{
   position: relative;
   width: 100%;
   height: 40px;
@@ -101,7 +103,10 @@ body {
   padding: 10px 0px;
   border: 1px solid;
 }
-.input__box-result span input , .disc_box span input{
+.input__box-disc{
+  display: none;
+}
+.input__box-result span input , .input__box-disc span input{
   position: relative;
   width: 100%;
   height: 100%;
@@ -114,20 +119,24 @@ body {
 .disc_box span input{
     border: 1px solid;
 }
-.input__box-result span:nth-child(1) {
+.input__box-result span:nth-child(1), .input__box-disc span:nth-child(1) {
   flex: 0.7;
   display: flex;
   width: 100%;
-  justify-content: right;
+  justify-content: center;
   padding-right: 13px;
 }
-.input__box-result span:nth-child(2) {
+.input__box-result span:nth-child(2), .input__box-disc span:nth-child(2){
   flex: 0.256;
   border-left: 1px solid;
   height: 40px;
   text-align: center;
   line-height: 40px;
   /* padding-left: 10px; */
+}
+
+.input__box-disc.active{
+  display: flex;
 }
 .btn {
   position: relative;
@@ -165,7 +174,7 @@ body {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: right;
+  justify-content: space-between;
   padding: 10px 12px;
   align-items: center;
 }
@@ -175,6 +184,18 @@ body {
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+
+.reset__btn{
+  position: relative;
+  width: 100px;
+  padding: 7px 0px;
+  border: none;
+  outline: none;
+  background-color: #214cdb;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
 }
 
 /* Hide elements visually, but not for screenreaders by clipping it */
@@ -229,6 +250,14 @@ body {
   .print_area * {
     visibility: visible;
     -webkit-print-color-adjust: exact;
+  }
+  .rate__cal{
+    width: calc(100% - 90px);
+    /* height: 70% */
+    margin-left: 40px;
+  }
+  .discount_box{
+    display: none;
   }
 }
 
